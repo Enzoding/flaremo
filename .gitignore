@@ -12,7 +12,11 @@ playwright-report/
 coverage/
 backups/
 .zcode/
-/wrangler.jsonc
+
+# 本部署 fork（Enzoding/flaremo）跟踪根目录 wrangler.jsonc，让 Workers Builds
+# 执行 `pnpm run deploy` 时不必设置 FLAREMO_* 构建变量。文件只含公开 origin
+# 与资源 id；BETTER_AUTH_SECRET 等 Worker secrets 不入库。
+# 带真实 account id 的其它副本仍忽略：
 /wrangler.*.jsonc
 .wrangler-shots/
 
